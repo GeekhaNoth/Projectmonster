@@ -9,7 +9,6 @@ namespace Script
         private GlobalInput.UI_ControlActions _uiControl;
     
         private float _rotation;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Awake()
         {
             _inputs = new GlobalInput();
@@ -24,9 +23,10 @@ namespace Script
             _uiControl.Rotation.canceled += GetRotation;
         }
     
-        void GetRotation(InputAction.CallbackContext ctx)
+        void GetRotation(InputAction.CallbackContext ctx) //Get player input to do rotation
         {
             _rotation = ctx.ReadValue<float>();
+            MoveCharacter();
         }
 
         void UnsubInputs()
@@ -37,7 +37,6 @@ namespace Script
         // Update is called once per frame
         private void Update()
         {
-            MoveCharacter();
         }
 
         private void MoveCharacter()
