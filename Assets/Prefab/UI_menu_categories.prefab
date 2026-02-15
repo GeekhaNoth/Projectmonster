@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!224 &8546980819931446877 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8171318689724354240, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!1001 &6373855359584782739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,6 +353,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 1446857807181303486, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1523eb16ce5dfd429e3a51fab3a7255, type: 3}
     - target: {fileID: 1594240813898679251, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 101
@@ -443,11 +447,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8171318689724354240, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160.25
+      value: 146
       objectReference: {fileID: 0}
     - target: {fileID: 8171318689724354240, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 20
+      value: 149
       objectReference: {fileID: 0}
     - target: {fileID: 8171318689724354240, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -483,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8171318689724354240, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 270
+      value: 311.59973
       objectReference: {fileID: 0}
     - target: {fileID: 8171318689724354240, guid: 3148b558ff578f149b4e3627986dce8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -551,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!1001 &6655530375788953471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -682,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!1001 &7335362207638940315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -813,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!1001 &7579266738545464358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -944,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!1001 &8813974424377066693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1075,7 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
 --- !u!1001 &9140177769429371416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1206,4 +1210,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cdde8d9118f547b5ada16cfd8cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Script.ButtonCategory
-  assetAndModels: []
+  category: 0
