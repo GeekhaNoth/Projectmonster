@@ -37,6 +37,7 @@ namespace Script
         // Update is called once per frame
         private void Update()
         {
+            MoveCharacter();
         }
 
         private void MoveCharacter()

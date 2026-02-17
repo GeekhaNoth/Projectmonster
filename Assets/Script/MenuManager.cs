@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ namespace Script
         public enum CategoryType
         {
             Head,
+            Body,
             LeftArm,
             RightArm,
             LeftLeg,
@@ -21,18 +23,22 @@ namespace Script
 
         public static MenuManager Instance { get; private set; }
 
-        public Button[] buttonCategoryArray;
-        private Dictionary<CategoryType, GameObject> _monsterBodyParts;
+        [SerializedDictionary("Category", "Game Object")]
+        public SerializedDictionary<CategoryType, GameObject> monsterBodyParts;
+        
 
         [SerializeField] private Button buttonPrefab;
         [SerializeField] private GameObject gridLayoutGo;
 
         public ScriptableAssetModel[] scriptableAssetModelsArray;
 
-
+        public List<Button> buttonsInstantiated;
 
         [SerializeField] private GameObject testObjetdebase;
         [SerializeField] private GameObject testObjetamettre;
+        
+        public GameObject arms;
+        public GameObject legs;
         private void Awake()
         {
             Instance = this;
@@ -43,8 +49,8 @@ namespace Script
         {
             if (Keyboard.current.pKey.wasPressedThisFrame)
             {
-                //InstantiateButtonTest();
-                testObjetdebase.GetComponent<MeshFilter>().mesh = testObjetamettre.GetComponent<MeshFilter>().sharedMesh;
+                InstantiateButtonTest();
+                //testObjetdebase.GetComponent<MeshFilter>().mesh = testObjetamettre.GetComponent<MeshFilter>().sharedMesh;
             }
         }
 
@@ -53,7 +59,8 @@ namespace Script
             foreach (var scriptable in scriptableAssetModels)
             {
                 var buttonInstantiate = Instantiate(buttonPrefab, gridLayoutGo.transform);
-                buttonInstantiate.GetComponent<Image>().sprite = scriptable.sprite;
+                buttonsInstantiated.Add(buttonInstantiate);
+                if (scriptable.sprite is not null) buttonInstantiate.GetComponent<Image>().sprite = scriptable.sprite;
                 buttonInstantiate.onClick.AddListener(delegate {ChangeModel(scriptable.model, scriptable.category); });
             }
         }
@@ -63,10 +70,25 @@ namespace Script
             Instantiate(buttonPrefab, gridLayoutGo.transform);
         }
 
+        public void DestroyButtons()
+        {
+            foreach (var button in buttonsInstantiated)
+            {
+                Destroy(button.gameObject);
+            }
+            buttonsInstantiated.Clear();
+        }
+
         private void ChangeModel(GameObject go, CategoryType category)
         {
-            var bodyPart = _monsterBodyParts[category];
-            bodyPart.GetComponent<MeshFilter>().mesh = go.GetComponent<MeshFilter>().mesh;
+            var bodyPartGo = monsterBodyParts[category];
+            bodyPartGo.GetComponent<MeshFilter>().mesh = go.GetComponent<MeshFilter>().sharedMesh;
+        }
+
+        public void ChangeGameObjectArmLegState(bool newState)
+        {
+            arms.gameObject.SetActive(newState);
+            legs.gameObject.SetActive(newState);
         }
     }
 }
