@@ -10,28 +10,19 @@ namespace Script
         
         private MenuManager _menuManager;
 
-        public ScriptableAssetModel[] _scriptableAssetModelsTypes;
+        private ScriptableAssetModel[] _scriptableAssetModelsTypes;
         
         private void Start()
          {
              _menuManager = MenuManager.Instance;
+             _scriptableAssetModelsTypes = _menuManager.scriptableAssetModelsArray.Where(x => x.category == category).ToArray();
          } 
         
         public void OnSelect(BaseEventData eventData)
         {
             _menuManager.DestroyButtons();
             _menuManager.ChangeGameObjectArmLegState(false);
-            if (_scriptableAssetModelsTypes.Length == 0)
-            {
-                _scriptableAssetModelsTypes = _menuManager.scriptableAssetModelsArray.Where(x => x.category == category).ToArray();
-            }
             _menuManager.InstantiateButtonsCategory(_scriptableAssetModelsTypes);
-        }
-
-        public void ButtonLeftRight(bool newState)
-        {
-            var aa = GetComponent<ButtonLeftRight>();
-            transform.GetChild(0).gameObject.SetActive(newState);
         }
     }
 }

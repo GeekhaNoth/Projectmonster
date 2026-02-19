@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: tete 1
   m_EditorClassIdentifier: Assembly-CSharp::Script.ScriptableAssetModel
   category: 0
-  sprite: {fileID: 0}
+  sprite: {fileID: -1464587203, guid: fac56e1369cccab468738609a761c4cf, type: 3}
   model: {fileID: 919132149155446097, guid: 3cd70ba00c790cd488323db3cdb079c8, type: 3}

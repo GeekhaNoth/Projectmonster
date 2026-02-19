@@ -32,26 +32,15 @@ namespace Script
 
         public ScriptableAssetModel[] scriptableAssetModelsArray;
 
-        public List<Button> buttonsInstantiated;
-
-        [SerializeField] private GameObject testObjetdebase;
-        [SerializeField] private GameObject testObjetamettre;
+        private List<Button> _buttonsInstantiated;
         
-        public GameObject arms;
-        public GameObject legs;
+        [SerializeField] private GameObject arms;
+        [SerializeField] private GameObject legs;
         private void Awake()
         {
             Instance = this;
             scriptableAssetModelsArray = Resources.LoadAll<ScriptableAssetModel>("");
-        }
-
-        private void Update()
-        {
-            if (Keyboard.current.pKey.wasPressedThisFrame)
-            {
-                InstantiateButtonTest();
-                //testObjetdebase.GetComponent<MeshFilter>().mesh = testObjetamettre.GetComponent<MeshFilter>().sharedMesh;
-            }
+            _buttonsInstantiated = new List<Button>();
         }
 
         public void InstantiateButtonsCategory(ScriptableAssetModel[] scriptableAssetModels)
@@ -59,24 +48,20 @@ namespace Script
             foreach (var scriptable in scriptableAssetModels)
             {
                 var buttonInstantiate = Instantiate(buttonPrefab, gridLayoutGo.transform);
-                buttonsInstantiated.Add(buttonInstantiate);
+                _buttonsInstantiated.Add(buttonInstantiate);
                 if (scriptable.sprite is not null) buttonInstantiate.GetComponent<Image>().sprite = scriptable.sprite;
                 buttonInstantiate.onClick.AddListener(delegate {ChangeModel(scriptable.model, scriptable.category); });
             }
         }
 
-        private void InstantiateButtonTest()
-        {
-            Instantiate(buttonPrefab, gridLayoutGo.transform);
-        }
-
         public void DestroyButtons()
         {
-            foreach (var button in buttonsInstantiated)
+            foreach (var button in _buttonsInstantiated)
             {
                 Destroy(button.gameObject);
             }
-            buttonsInstantiated.Clear();
+
+            _buttonsInstantiated.Clear();
         }
 
         private void ChangeModel(GameObject go, CategoryType category)

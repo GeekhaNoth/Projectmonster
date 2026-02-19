@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Script
 {
-    public class ButtonLeftRight : MonoBehaviour//, ISelectHandler
+    public class ButtonLeftRight : MonoBehaviour, ISelectHandler
     {
         private MenuManager _menuManager;
         
@@ -16,23 +16,23 @@ namespace Script
         {
             _menuManager = MenuManager.Instance;
             _children = transform.GetChild(0).gameObject;
-            GetComponent<Button>().onClick.AddListener(OnClick);
+            //GetComponent<Button>().onClick.AddListener(OnClick);
         }
 
 
-        /*public void OnSelect(BaseEventData eventData)
+        public void OnSelect(BaseEventData eventData)
+        {
+            _menuManager.DestroyButtons();
+            _menuManager.ChangeGameObjectArmLegState(false);
+            if (!_children.activeSelf) _children.SetActive(true);
+        }
+        
+        /*public void OnClick()
         {
             _menuManager.DestroyButtons();
             _menuManager.ChangeGameObjectArmLegState(false);
             if (!_children.activeSelf) _children.SetActive(true);
         }*/
-        
-        public void OnClick()
-        {
-            _menuManager.DestroyButtons();
-            _menuManager.ChangeGameObjectArmLegState(false);
-            if (!_children.activeSelf) _children.SetActive(true);
-        }
         
         
     }
