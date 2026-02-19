@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b6e7309b25ab8c41a3af456b2d5b545
+guid: 07987dfad5dc156438144ec65b6479d8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bras gauche_0
+      name: Bras 03_logo_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 12
-        width: 140
-        height: 178
+        x: 419
+        y: 118
+        width: 217
+        height: 844
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5ddce70206590f49b4b770a5f9c758f
-      internalID: -878079076
+      spriteID: 290d318ca9ee4364981c109cb6e40dce
+      internalID: -1345157746
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e49dfaa6731972840ab328f4509b89fc
+    spriteID: c83acdce9c4e1ca40ba85bfe0d2294de
     internalID: 0
     vertices: []
     indices: 
@@ -134,17 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      bras gauche_0: -878079076
-      bras gauche_1: 1141391543
-      bras gauche_10: -356749059
-      bras gauche_2: 2052413271
-      bras gauche_3: -73013816
-      bras gauche_4: -527446754
-      bras gauche_5: 1870879903
-      bras gauche_6: -850538376
-      bras gauche_7: -334025880
-      bras gauche_8: -138059759
-      bras gauche_9: 1614851973
+      Bras 03_logo_0: -1345157746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
