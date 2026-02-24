@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Jambe1
   m_EditorClassIdentifier: Assembly-CSharp::Script.ScriptableAssetModel
   category: 4
-  sprite: {fileID: 0}
+  sprite: {fileID: -1242806096, guid: 33a1dfd617ef6ab45b54e13a85185f72, type: 3}
   model: {fileID: 919132149155446097, guid: 2a7a89bdc182ef14c874ce8715033cd4, type: 3}

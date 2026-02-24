@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Torse
   m_EditorClassIdentifier: Assembly-CSharp::Script.ScriptableAssetModel
   category: 1
-  sprite: {fileID: -205103462, guid: f290728a733868045be50aa46475ef45, type: 3}
+  sprite: {fileID: -671090228, guid: f290728a733868045be50aa46475ef45, type: 3}
   model: {fileID: 919132149155446097, guid: 9a9f7f94eddbacf439a60b66a8778959, type: 3}

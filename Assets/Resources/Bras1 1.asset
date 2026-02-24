@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Bras1 1
   m_EditorClassIdentifier: Assembly-CSharp::Script.ScriptableAssetModel
   category: 3
-  sprite: {fileID: -640839529, guid: c122eeb08bfaf2e488931150566edfef, type: 3}
-  model: {fileID: 919132149155446097, guid: bc596f620c735e4419d72dbee7fea8df, type: 3}
+  sprite: {fileID: -756801278, guid: e4ecc1f1196f938468897e0a26b20cde, type: 3}
+  model: {fileID: 919132149155446097, guid: 17a33c6140767fc48b21e8cfa24c3df2, type: 3}

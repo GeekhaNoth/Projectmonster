@@ -9,7 +9,8 @@ namespace Script
         private GlobalInput.UI_ControlActions _uiControl;
     
         private float _rotation;
-        void Awake()
+
+        private void Awake()
         {
             _inputs = new GlobalInput();
             _uiControl = _inputs.UI_Control;
@@ -17,19 +18,19 @@ namespace Script
             _inputs.Enable();
         }
 
-        void SubInputs()
+        private void SubInputs()
         {
             _uiControl.Rotation.performed += GetRotation;
             _uiControl.Rotation.canceled += GetRotation;
         }
-    
-        void GetRotation(InputAction.CallbackContext ctx) //Get player input to do rotation
+
+        private void GetRotation(InputAction.CallbackContext ctx) //Get player input to do rotation
         {
             _rotation = ctx.ReadValue<float>();
             MoveCharacter();
         }
 
-        void UnsubInputs()
+        private void UnsubInputs()
         {
             _uiControl.Rotation.performed -= GetRotation;
             _uiControl.Rotation.canceled -= GetRotation;
